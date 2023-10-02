@@ -1,3 +1,68 @@
 :root {
-  --primary-color: hsl(205, 78%, 60%);
+  --primary-color: #c59d5f;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+@font-face {
+  font-family: "Great vibes";
+  src: url(./fonts/GreatVibes.ttf);
+}
+body {
+  margin: 0;
+  font-size: 14px;
+  background-color: hsl(210, 36%, 96%);
+  letter-spacing: 3px;
+  font-family: "Open sans", sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  max-width: 620px;
+  height: 100vh;
+  margin: auto;
+}
+main {
+  margin: auto;
+  width: 90vw;
+}
+
+h1 {
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--primary-color);
+  font-family: "Great Vibes";
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+h2 {
+  text-transform: capitalize;
+  display: inline-block;
+  color: hsl(209, 61%, 16%);
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.q-a {
+  background-color: #fff;
+  padding: 15px 30px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: var(--light-shadow);
+}
+
+.answer {
+  display: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
 }
