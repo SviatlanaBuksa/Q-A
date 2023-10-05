@@ -1,6 +1,8 @@
 :root {
-  --primary-color: #c59d5f;
+  --primary-color: hsl(209, 61%, 16%);
+  --accent-color: #c59d5f;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s linear;
 }
 @font-face {
   font-family: "Great vibes";
@@ -29,7 +31,7 @@ main {
 h1 {
   text-transform: capitalize;
   text-align: center;
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-family: "Great Vibes";
   margin-bottom: 10px;
   padding-bottom: 30px;
@@ -39,7 +41,7 @@ h1 {
 h2 {
   text-transform: capitalize;
   display: inline-block;
-  color: hsl(209, 61%, 16%);
+  color: var(--primary-color);
   font-weight: 100;
   font-size: 14px;
 }
@@ -49,20 +51,35 @@ h2 {
   padding: 15px 30px;
   margin-top: 30px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-radius: 10px;
   box-shadow: var(--light-shadow);
 }
 
-.answer {
-  display: none;
+p {
+  letter-spacing: normal;
+  line-height: 1.5rem;
+  color: hsl(210, 22%, 49%);
 }
 
 button {
   background-color: transparent;
   border: none;
+  transition: var(--transition);
 }
+button:hover {
+  cursor: pointer;
+  rotate: 90deg;
+}
+
 i {
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-size: 1.5rem;
+}
+
+.answer {
+  display: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
 }
