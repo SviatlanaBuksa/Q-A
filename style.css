@@ -8,6 +8,7 @@
   font-family: "Great vibes";
   src: url(./fonts/GreatVibes.ttf);
 }
+
 body {
   margin: 0;
   font-size: 14px;
@@ -15,38 +16,26 @@ body {
   letter-spacing: 3px;
   font-family: "Open sans", sans-serif;
 }
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  max-width: 620px;
-  height: 100vh;
-  margin: auto;
-}
-main {
-  margin: auto;
+
+.section-center {
   width: 90vw;
+  max-width: 620px;
+  margin: 0 auto;
 }
 
+.title {
+  margin-top: 15vh;
+  margin-bottom: 4rem;
+}
 h1 {
   text-transform: capitalize;
   text-align: center;
   color: var(--accent-color);
   font-family: "Great Vibes";
-  margin-bottom: 10px;
-  padding-bottom: 30px;
   font-size: 2.5rem;
 }
 
-h2 {
-  text-transform: capitalize;
-  display: inline-block;
-  color: var(--primary-color);
-  font-weight: 100;
-  font-size: 14px;
-}
-
-.q-a {
+.question {
   background-color: #fff;
   padding: 15px 30px;
   margin-top: 30px;
@@ -55,6 +44,13 @@ h2 {
   justify-content: space-between;
   border-radius: 10px;
   box-shadow: var(--light-shadow);
+}
+h2 {
+  text-transform: capitalize;
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 100;
+  font-size: 14px;
 }
 
 p {
@@ -77,9 +73,17 @@ i {
   color: var(--accent-color);
   font-size: 1.5rem;
 }
-
+.plus-icon,
+.minus-icon,
 .answer {
   display: none;
+}
+
+.answer {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   margin-top: 15px;
+}
+
+.show-answer {
+  display: block;
 }
