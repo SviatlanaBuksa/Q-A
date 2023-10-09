@@ -21,6 +21,7 @@ body {
   width: 90vw;
   max-width: 620px;
   margin: 0 auto;
+  padding-bottom: 4rem;
 }
 
 .title {
@@ -39,15 +40,15 @@ h1 {
   background-color: #fff;
   padding: 15px 30px;
   margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   border-radius: 10px;
   box-shadow: var(--light-shadow);
 }
+.question-title {
+  display: flex;
+  justify-content: space-between;
+}
 h2 {
   text-transform: capitalize;
-  display: inline-block;
   color: var(--primary-color);
   font-weight: 100;
   font-size: 14px;
@@ -73,17 +74,23 @@ i {
   color: var(--accent-color);
   font-size: 1.5rem;
 }
-.plus-icon,
-.minus-icon,
-.answer {
-  display: none;
-}
-
 .answer {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   margin-top: 15px;
 }
-
-.show-answer {
+/* hide text */
+.answer {
+  display: none;
+}
+.show-answer .answer {
   display: block;
+}
+.minus-icon {
+  display: none;
+}
+.show-answer .minus-icon {
+  display: inline;
+}
+.show-answer .plus-icon {
+  display: none;
 }

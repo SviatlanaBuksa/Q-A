@@ -1,13 +1,14 @@
 "use strict";
+let questions = document.querySelectorAll(".question");
 
-let plusBtns = document.querySelectorAll("button");
-
-plusBtns.forEach(function (btn) {
-  btn.addEventListener("click", function (e) {
-    let allBtns = e.currentTarget.children;
-    for (let btn of allBtns) {
-      btn.classList.toggle("show-answer");
-    }
-    btn.nextElementSibling.classList.toggle("show-answer");
+questions.forEach(function (question) {
+  let btn = question.querySelector(".question-btn");
+  btn.addEventListener("click", function () {
+    questions.forEach(function (item) {
+      if (item != question) {
+        item.classList.remove("show-answer");
+      }
+    });
+    question.classList.toggle("show-answer");
   });
 });
